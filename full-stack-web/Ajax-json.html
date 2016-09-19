@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax-JSON</title>
+</head>
+<body>
+    <!--https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript-->
+    <div>
+        <div id="out">
+            <h1>out content:</h1>
+        </div>
+    </div>
+    <script>
+		// window.onload
+		// src="demo.json"
+        var jo = {
+			"name" : "xgqfrms",
+			"age" : "23",
+			"gender" : "man"
+		}
+		var s = JSON.stringify(jo);
+		//alert(x);
+		// console.log("\n");
+		console.log("\nJSON.stringify=" + s + "\n\n");
+        var p = JSON.parse(s);
+        //p is Object
+        console.log("\ntypeof(p)=" + typeof(p) + "\n\n");
+        console.log("\nJSON.parse:name=" + p.name + "\n\n");
+        console.log("\nJSON.parse:age=" + p.age + "\n\n");
+        console.log("\nJSON.parse:gender=" + p.gender + "\n\n");
+        console.log("\nJSON.parse:length=" + p.length + "\n\n");
+        
+        var div = document.getElementById("out");
+        var out = document.createElement("p");
+        // p.creatTextodeNode(s);
+        out.innerHTML = "S=" +s;
+        div.appendChild(out);
+	</script>
+</body>
+</html>
