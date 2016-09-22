@@ -33,6 +33,9 @@
 		$("#getMessage").on("click", function() {
 			$.getJSON("./json/cats.json", function(json) {
 				var html = "";
+				json = json.filter(function(val) {
+  					return (val.id !== 1);
+				});
 				// Only change code below this line.
 				json.forEach(function(val) {
 					var keys = Object.keys(val);
