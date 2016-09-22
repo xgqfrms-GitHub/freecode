@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="http://cdn.xgqfrms.xyz/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="./libs/bootstrap.min.css">-->
+	<!--<script src="./libs/jquery-3.1.0.min.js"></script>-->
 </head>
 <body>
 	<div>
@@ -25,10 +26,10 @@
 		  </div>
 		</div>
 	</div>
-<script src="http://cdn.xgqfrms.xyz/jquery/jquery-3.1.0.min.js"></script>
-<script src="http://cdn.xgqfrms.xyz/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- <script src="http://cdn.xgqfrms.xyz/"></script> -->
+<!--<script src="./libs/jquery-3.1.0.min.js"></script>-->
+<!---->
 <script>
+	var $ = jQuery().noConflict();
 	$(document).ready(function() {
 		$("#getMessage").on("click", function() {
 			$.getJSON("./json/cats.json", function(json) {
@@ -44,7 +45,7 @@
 					html += "</div><br>";
 				});
 				// Only change code above this line.
-        		$(".message").html(html);
+				$(".message").html(html);
 			});
 		});
 	});
